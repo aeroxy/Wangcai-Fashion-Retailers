@@ -364,11 +364,16 @@ html {
 .swiper-wrapper .swiper-slide .image {
   position: relative;
   width: 50%;
-  padding: 0 10%;
   height: 100%;
   display: table-cell;
   vertical-align: middle;
   opacity: 0;
+}
+.swiper-wrapper .swiper-slide > div:nth-of-type(1) {
+  padding: 0 0 0 10%;
+}
+.swiper-wrapper .swiper-slide > div:nth-of-type(2) {
+  padding: 0 10% 0 0;
 }
 .swiper-wrapper .swiper-slide .image svg {
   width: 100%;
@@ -377,7 +382,7 @@ html {
 .swiper-wrapper .swiper-slide .desc {
   position: relative;
   min-width: 50%;
-  padding: 0 5%;
+  padding: 0 5% !important;
   display: table-cell;
   vertical-align: middle;
   opacity: 0;
@@ -419,7 +424,7 @@ html {
   padding: 0 3%;
 }
 .swiper-wrapper .swiper-slide:nth-of-type(2n+1) {
-  background: #21406e;
+  background: #378e66;
 }
 .swiper-wrapper .swiper-slide:nth-of-type(2n) {
   background: #7499d1;
