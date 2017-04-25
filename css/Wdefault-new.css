@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+.center1200{width:1200px;height:100%;margin:0 auto;position:relative;}
+
+/* header */
+#header { position:absolute; padding:10px 30px; left: 0; right: 0; height:44px;z-index:30;background:#fff;background: rgba(255,255,255,.9); width: auto;}
+#header .header-container {height:44px;width:auto;background: none;}
+#header .logo { float:left; width:200px; height:48px;}
+#header .logo-img { width:145px; height:44px;background:url(../img/logo.png) no-repeat 0 0;float:left;}
+#header .logo-copyright { float:left; line-height:30px; width:170px; display:block; position:relative; z-index:15;}
+#header .user-center { float:right; width:280px; padding:7px 0; margin-top: 0;}
+#header .loginout,
+#header .usercenter,
+#header .loginin { float: right; line-height:30px;font-size:12px; color:#999;margin-top: 0;}
+#header .loginin a { margin: 0 15px;}
+#header .loginout { width:auto; height:30px;}
+#header .loginout a { color:#999;}
+#header .usercenter { position:relative; margin-right: 20px; float: left;}
+#header .username {width:auto; cursor:pointer;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; position:relative; text-align:right; color:#609fec;}
+#header .loginin { width:auto; height:30px;padding-left: 0;}
+#header .loginin a { color:#999; font-size:12px;}
+#header .loginin a:hover { color: #ed1c24;}
+.Indnav { float: left; width:auto; height:44px; padding-right:20px;}
+.Indnav li { padding: 7px 5px;float:left;text-align:center;position:relative;overflow:visible;line-height: normal;height: auto;margin-left: 0;}
+.Indnav li img { position:absolute;top:0;left:-35px;display:none;}
+.Indnav li.hover a{color:#ed1c24;font-weight:normal;}
+.Indnav li a{ display: block;padding: 0 10px;color:#333;font-size:14px;color:#333;line-height:30px;}
+.Indnav li.hover {border-bottom: 0;padding-bottom: 0;}
+.Indnav li a:hover{color:#ed1c24;}
+
+
+/*footer*/
+#footer-new  {background:#f3f4f6;font-family:"microsoft yahei";text-align:center;padding-bottom:50px}
+#footer-new  .contact-us{padding-top:40px}
+#footer-new  .contact-us dl {width:33.3%;float:left;padding:10px 0px;color:#555}
+#footer-new  .contact-us dl dt { position: relative; margin-bottom:20px;}
+#footer-new  .contact-us dl dt .wangcaio2o-qr {pointer-events: none; position:absolute; bottom:50px; left: 50%; margin-left: -90px; opacity: 0;-webkit-transform:translateY(-20px);-moz-transform:translateY(-20px);transform:translateY(-20px);-webkit-transition:all 0.5s;-ms-transition:all 0.5s; transition:all 0.5s;}
+#footer-new  .contact-us dl:hover dt .wangcaio2o-qr { opacity: 1;-webkit-transform:translateY(0);-moz-transform:translateY(0);-ms-transform:translateY(0);transform:translateY(0);}
+#footer-new  .contact-us dl dd {line-height:24px;color:#555;font-size:14px}
+#footer-new  .contact-us dl dd.font_dd1{color:#666;font-size:12px}
+#footer-new  .contact-us dl dd a {color:#666;}
+#footer-new  .bottom-nav{font-size:12px;color:#999;text-align:center;padding:40px 0px 10px}
+#footer-new  .bottom-nav  a{margin:0px 8px;color:#999;}
+#footer-new  .footer-copyright{width:100%;margin:0 auto;text-align:center}
+#footer-new  .wangcaio2o-honesty{height:35px;}
+#footer-new  .honesty_logo{margin-top:20px;}
+
+.news {width: 100%;overflow: hidden;}
+.news #header { position: absolute; background: rgba(255,255,255,0); transition: 0.4s;padding: 0; height: 64px;overflow: visible;}
+.news #header .header_bg{display:none;position: absolute;left: 0;top: 0;width: 100%; height: 64px; background: #fff;z-index: -1;}
+.news #header .usercenter .username{line-height: 64px;}
+.mobileNav{display: none!important;}
+.news #header .header-container{ width: 1200px; margin: 0 auto; background: none;height: 64px;}
+.news #header .header-container .topSlideMenuList{display:none;}
+.news #header .header-container .bottomList{display:none;}
+.news #header .logo-img{background:url(http://cp-static.wangcaio2o.com/Public/Image/new2017/newLogo.png) left center no-repeat;width:168px;height:64px;float:left;}
+.news #header .user-center{padding: 0; font-size: 14px; width: 270px;}
+.news #header .loginin{height: 64px;line-height: 64px;color: #333;}
+.news #header .loginin a{color: #333;font-size: 14px; line-height: 64px;}
+.news #header:hover { background: rgba(255,255,255,0.8);}
+.news #header:hover .header_bg{display: block;}
+.news #header:hover .Indnav li.hover>a{ color: #edaa00;}
+.news #header:hover .user-center{color: #333;}
+.news #header:hover .user-center a{color: #333;}
+.news #header:hover .loginin{color: #333;}
+.news #header:hover .usercenter .username{line-height: 64px; color: #333}
+.news .Indnav{height: 64px;}
+.news .header-container .logan img{display:none;}
+.news .header-container .content img{display:none;}
+.news .Indnav li{box-sizing: content-box;padding: 0px 5px}
+.news .Indnav li:hover{border-bottom: 2px solid #eba928;}
+.news .Indnav li.hover>a{color: #edaa00;}
+.news .Indnav li>a{color: #333;line-height: 62px;}
+.news .Indnav .yima{background:#fff;display: none;position: fixed;width: 100%;min-width: 1180px; top: 64px;left: 0; border-top: 1px solid #ebebeb; transition: 0.4s; height: 115px; overflow: hidden;}
+.news .Indnav .yima:before{display: none;}
+.news .Indnav .about-content{width: 405px;position: relative; padding-top: 30px; margin: 0 auto;}
+.news .Indnav .about-content a{color: #fff; width: 100px; height: 55px; float: left; padding: 0; line-height: 90px;}
+
+.news #header .header-container .topSlideMenuList{display:none;}
+.news #header .Indnav .about-content a:hover{color: #edaa00!important;}
+.news #header .username{color: #333;}
+.news #header .loginout a{color: #333;line-height: 64px;}
+
+@media screen and (max-width:440px){
+#header { padding:10px 0;}
+#header { height:auto; overflow: visible;}
+#header .header-container {height:30px;}
+#header .user-center { display: none;}
+#header .user-center-ms { width:70px; height:30px; float: right;}
+#header .user-center-ms i { display: block; float: right; width: 30px; height: 30px;  cursor: pointer;}
+#header .logo { height:30px; margin-left: 10px;}
+#header .logo-img { height:30px; background-size:contain;}
+#header .Indnav { display: none; margin-top: 10px; margin-bottom: -7px; padding: 0; overflow: hidden; width: 100%; border-top: solid 1px #eee; height:40px; line-height:40px; overflow-x: auto;-webkit-overflow-scrolling : touch;}
+#header .Indnav ul { width:680px;}
+#header .Indnav ul li { padding:5px 0;}
+}

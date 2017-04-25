@@ -28,8 +28,49 @@
 		<div class="load"></div>
 		<!--head 引入-->
 		<!-- <include file="loginHeader"/> -->
+		<script type="text/javascript">
+		window._g = window._g || {};
+		$(document).ready(function(){
+			$.ajax({
+				type: "get",
+				async: false,
+				url: 'http://www.wangcaio2o.com/index.php?g=Home&m=Jsonp&a=index',
+				dataType: "jsonp",
+				jsonp: "callback",
+				success: function(data){
+					if(data.user_name != "" && data.user_name!= null) {
+					$(".user-center").html("<input type='hidden' name='weixin_check_status' id='weixin_check_status' value='"+data.weixin_check_status+"' /><input type='hidden' name='weixin_status' id='weixin_status' value='"+data.weixin_status+"' /><input type='hidden' name='alipay_check_status' id='alipay_check_status' value='"+data.alipay_check_status+"' /><input type='hidden' name='alipay_status' id='alipay_status' value='"+data.alipay_status+"' /><input type='hidden' name='nationalday_status' id='nationalday' value='"+data.nationalday_status+"' /><input type='hidden' name='client_id' id='client_id' value='"+data.client_id+"' /><input type='hidden' name='info_status' id='info_status' value='"+data.info_status+"' /><input type='hidden' name='info_phone' id='info_phone' value='"+data.info_phone+"' /><input type='hidden' name='account_info' id='account_info' value='"+data.account_info+"' /><div class='usercenter mr20 l'><div class='username' onclick=javascript:window.location.href='http://www.wangcaio2o.com/index.php?g=Home&m=Index&a=index';>欢迎您："+data.user_name+"<i class='usercentermore'></i></div></div><div class='loginout l'><a href='http://www.wangcaio2o.com/index.php?g=Home&m=Logout&a=index'>退出</a></div>");
+					}
+					_g.user_info = data;
+				},
+				error:function (data){    
+					alert("出错了");
+				}
+			});
+		});
+		</script>
+		<div id="header">
+			<div class="header-container fn">
+				<div class="logo">
+					<div class="logo-img"><a href="index.php" class="a-hide" title="翼码旺财"></a></div>
+				</div>
+				<div class="user-center">
+					<div class="loginin l"><a href="http://www.wangcaio2o.com/index.php?g=Home&amp;m=Login&amp;a=showLogin" class="login-url" id="topLoginBtn">商户登录</a>|<a href="http://t-daili.wangcaio2o.com" class="login-url" id="topLoginBtn">代理商登录</a>|<a href="http://www.wangcaio2o.com/index.php?g=Home&amp;m=Reg&amp;a=index&amp;tg_id=&amp;from_user_id=9000" id="topRegisterBtn">注册</a></div>
+				</div>
+				<div class="Indnav r">
+					<li id="home"><a href="index.php">首页</a></li>
+					<li id="introduce" class="hover"><a href="http://www.wangcaio2o.com/index.php?m=Introduce&amp;a=index">产品介绍</a></li>
+					<li id="onlineExper"><a href="http://cp.wangcaio2o.com/dlhd.html?id=58468">多乐互动</a></li>
+					<li id="hall"><a href="http://www.wangcaio2o.com/index.php?g=Hall&amp;m=Index&amp;a=index" target="_blank">卡券商城</a></li>
+					<li id="oper"><a href="http://www.wangcaio2o.com/index.php?g=Home&amp;m=Help&amp;a=helpConter">帮助中心</a></li>
+					<li id="contact"><a href="http://www.wangcaio2o.com/index.php?m=Contactus&amp;a=index">关于翼码</a></li>
+					<li id="help"><a href="http://www.wangcaio2o.com/index.php?g=Home&amp;m=Active&amp;a=index">活动中心</a></li>
+					<li id="daili"><a href="http://cp.wangcaio2o.com/dmsdAgent.html" target="_blank">诚招代理商</a></li>
+				</div>
+			</div>
+		</div>
+		<link href="css/Wdefault-new.css" rel="stylesheet" type="text/css">
 		<!--head 引入 end-->
-
 		<div class="page">
 			<div class="nav"></div>
 			<div class="logo_new"></div>
@@ -121,7 +162,7 @@
 		<div class="wrap">
 			<div class="map">
 				<div class="map-image">
-					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Map" x="0px" y="0px" viewBox="0 0 3000 1406" xml:space="preserve">
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Map" x="0px" y="0px" viewBox="0 0 3000 1600" xml:space="preserve">
 						<image id="map-background" xlink:href="" x="0" y="0" height="1600px" width="3000px"></image>
 						<image xlink:href="img/people_1.gif" x="1220px" y="1000px" width="100px" height="100px"></image>
 						<image xlink:href="img/monument.png" x="12.9%" y="97%" width="61px" height="100px">
@@ -140,7 +181,7 @@
 var loadingdisplayed = false;
 setTimeout(function(){
 	loadingdisplayed = true;
-}, 5000);
+}, 1840);
 function UrlParam(){
 	var name,value;
 	var str=window.location.href;
@@ -249,14 +290,14 @@ $(function(){
 	};
 
 	//适配手机圆点显示位置
-	if($(window).width()<500){
-		//人力资源部
-		map_basic.tips[0].position = {x:'0.6000',y:'0.2500'};
-		//业务管理部
-		map_basic.tips[1].position = {x:'0.4460',y:'0.1030'};
-		//营销管理部
-		map_basic.tips[3].position = {x:'0.3580',y:'0.3940'};
-	}
+	// if($(window).width()<500){
+	// 	//人力资源部
+	// 	map_basic.tips[0].position = {x:'0.6000',y:'0.2500'};
+	// 	//业务管理部
+	// 	map_basic.tips[1].position = {x:'0.4460',y:'0.1030'};
+	// 	//营销管理部
+	// 	map_basic.tips[3].position = {x:'0.3580',y:'0.3940'};
+	// }
 
 	//生成主图区域
 	$(".map").restmap(map_basic);
@@ -287,7 +328,7 @@ $(function(){
 				} else {
 					var timer_end = new Date().getTime();
 					var timer_lazy = 1600-(timer_end-timer_start) ||0;
-					console.log(timer_start,timer_end,timer_end-timer_start);
+					// console.log(timer_start,timer_end,timer_end-timer_start);
 					setTimeout(function(){
 						$(".load").addClass("over");
 						$(".map-tools").addClass("show");
