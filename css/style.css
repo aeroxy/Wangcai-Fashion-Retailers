@@ -37,6 +37,7 @@ html {
   -webkit-animation: navIn 1.5s 0.5s forwards;
 }
 .logo_new {
+  background: url(../img/logo_new.png) center no-repeat;
   width: 11.354vw;
   height: 2.92vw;
   background-size: contain;
@@ -122,7 +123,6 @@ image.cloud {
   bottom: 0;
 }
 .map .map-tools > div {
-  opacity: 1;
   width: auto;
   height: auto;
   overflow: visible;
@@ -131,6 +131,27 @@ image.cloud {
   top: 150px;
   margin-left: -42px;
   margin-top: -42px;
+  opacity: 0;
+}
+.map .map-tools > div:nth-of-type(1) {
+  animation: clock_animate 2s 1s forwards;
+  -webkit-animation: clock_animate 2s 1s forwards;
+}
+.map .map-tools > div:nth-of-type(2) {
+  animation: clock_animate 2s 1.2s forwards;
+  -webkit-animation: clock_animate 2s 1.2s forwards;
+}
+.map .map-tools > div:nth-of-type(3) {
+  animation: clock_animate 2s 1.4s forwards;
+  -webkit-animation: clock_animate 2s 1.4s forwards;
+}
+.map .map-tools > div:nth-of-type(4) {
+  animation: clock_animate 2s 1.6s forwards;
+  -webkit-animation: clock_animate 2s 1.6s forwards;
+}
+.map .map-tools > div:nth-of-type(5) {
+  animation: clock_animate 2s 1.8s forwards;
+  -webkit-animation: clock_animate 2s 1.8s forwards;
 }
 .map .map-tools > div.active .map-tools-tip:after {
   visibility: visible;
@@ -199,7 +220,7 @@ image.cloud {
 }
 .map .map-tools .map-tools-content {
   display: none;
-  padding-left: 30px;
+  padding-left: 20px;
   box-sizing: border-box;
   position: absolute;
   left: 165px;
@@ -215,15 +236,14 @@ image.cloud {
   -moz-border-radius: 8px;
 }
 .map .map-tools .map-tools-content > p {
-  font-size: 2vmin;
+  font-size: 2vmax;
   line-height: 2.2em;
   color: #FF7171;
 }
 .map .map-tools .map-tools-content > div {
   color: #7F7F7F;
-  font-size: 1.5vmin;
+  font-size: 1.5vmax;
   line-height: 1.6em;
-  margin-right: 70px;
 }
 .map .map-tools .map-tools-content .close {
   content: "";
@@ -344,7 +364,7 @@ image.cloud {
 .swiper-wrapper .swiper-slide .desc {
   position: relative;
   min-width: 50%;
-  padding: 0 5% !important;
+  padding: 10% !important;
   display: table-cell;
   vertical-align: middle;
   opacity: 0;
@@ -1121,6 +1141,36 @@ image.cloud {
     opacity: 1;
   }
 }
+@media screen and (orientation:portrait) {
+  .swiper-wrapper .swiper-slide .desc {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100% !important;
+    top: 45%;
+    max-height: 45%;
+    overflow: auto;
+    text-align: center;
+  }
+  .swiper-wrapper .swiper-slide .image {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100% !important;
+    padding: 10% 10% 5% 10% !important;
+    top: 5%;
+    height: 45%;
+  }
+  .use_now {
+    margin: 10px auto;
+  }
+}
+@media screen and (orientation:landscape) {
+  .map .map-tools .map-tools-content > p {
+    font-size: 2vmin;
+  }
+  .map .map-tools .map-tools-content > div {
+    font-size: 1.5vmin;
+  }
+}
 @media screen and (min-width: 1440px) {
   .desc p:nth-of-type(2) {
     font-size: 16px !important;
@@ -1258,14 +1308,14 @@ image.cloud {
 }
 @media screen and (max-width: 440px) {
   .desc .risk-manage li p.title {
-    font-size: 11px !important;
+    font-size: 13px !important;
     text-align: center;
   }
   .desc p:nth-of-type(1) {
     font-size: 14px !important;
   }
   .desc p:nth-of-type(2) {
-    font-size: 10px !important;
+    font-size: 12px !important;
   }
   .map .map-tools .map-tools-content {
     width: 210px;
@@ -1288,30 +1338,10 @@ image.cloud {
     display: block;
     padding: 0 !important;
   }
-  .swiper-wrapper .swiper-slide .desc {
-    box-sizing: border-box;
-    position: absolute;
-    width: 100% !important;
-    top: 45%;
-    max-height: 45%;
-    overflow: auto;
-    text-align: center;
-  }
-  .swiper-wrapper .swiper-slide .image {
-    box-sizing: border-box;
-    position: absolute;
-    width: 100% !important;
-    padding: 0 20% !important;
-    top: 5%;
-    height: auto;
-  }
   .second_center {
     display: none;
   }
   .page .swiper-next {
     bottom: 10px !important;
-  }
-  .use_now {
-    margin: 10px auto;
   }
 }
