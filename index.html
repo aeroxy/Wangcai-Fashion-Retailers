@@ -25,7 +25,7 @@
 
 	</head>
 	<body>
-		<div class="load"></div>
+		<div class="load"><div class="loading"></div></div>
 		<!--head 引入-->
 		<!-- <include file="loginHeader"/> -->
 		<script type="text/javascript">
@@ -188,7 +188,7 @@
 var loadingdisplayed = false;
 setTimeout(function(){
 	loadingdisplayed = true;
-}, 1840);
+}, 2000);
 function UrlParam(){
 	var name,value;
 	var str=window.location.href;
@@ -343,7 +343,7 @@ $(function(){
 				}
 			},500);
 		}
-		// waitforloading();
+		waitforloading();
 		//百度统计代码
 		// (function() {
 		//     var hm1 = document.createElement("script");
