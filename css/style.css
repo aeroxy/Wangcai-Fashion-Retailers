@@ -72,12 +72,15 @@ html {
   border: 1px solid #f16a55;
 }
 .load {
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   position: fixed;
   left: 0;
   top: 0;
-  background: #2aa56d url(../img/loading.gif) center center no-repeat;
+  background: #2aa56d url(../img/loading.png) no-repeat;
+  background-size: 100px;
+  animation: loading 2s steps(45);
+  -webkit-animation: loading 2s steps(45);
   z-index: 100;
 }
 .load.over {
@@ -427,6 +430,22 @@ image.cloud {
   animation: clock_animate 1s 1s ease forwards;
   -webkit-animation: clock_animate 1s 1s ease forwards;
   opacity: 0;
+}
+@-webkit-keyframes loading {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px -4500px;
+  }
+}
+@keyframes loading {
+  from {
+    background-position: 0px 0px;
+  }
+  to {
+    background-position: 0px -4500px;
+  }
 }
 @-webkit-keyframes cloud {
   0%,
