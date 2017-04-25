@@ -13,7 +13,6 @@ html {
 .wrap {
   height: 100%;
 }
-/*首页导航*/
 .nav {
   position: fixed;
   right: 2.604vw;
@@ -37,7 +36,6 @@ html {
   animation: navIn 1.5s 0.5s forwards;
   -webkit-animation: navIn 1.5s 0.5s forwards;
 }
-/*logo 水印*/
 .logo_new {
   width: 11.354vw;
   height: 2.92vw;
@@ -73,7 +71,6 @@ html {
   background: #f16a55;
   border: 1px solid #f16a55;
 }
-/*loading*/
 .load {
   width: 100%;
   height: 100%;
@@ -87,7 +84,6 @@ html {
   animation: loadover 0.8s 0.3s forwards;
   -webkit-animation: loadover 0.8s 0.3s forwards;
 }
-/*首页-地图区样式*/
 .map {
   width: 100%;
   height: 100%;
@@ -103,6 +99,9 @@ html {
   y: 0px;
   transform-origin: 50% 50% 0px;
   -webkit-transform-origin: 50% 50% 0px;
+}
+image.cloud {
+  animation: cloud 20s 0s infinite;
 }
 .map .map-tools {
   position: absolute;
@@ -133,14 +132,14 @@ html {
   -webkit-animation: maptoolscontent .4s 0s forwards;
 }
 .map .map-tools .map-tools-tip {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 70px;
   height: 70px;
   left: 41px;
   top: 41px;
   font-size: 14px;
-  line-height: 20px;
-  padding: 25px 0;
   box-sizing: border-box;
   text-align: center;
   color: #fff;
@@ -204,18 +203,15 @@ html {
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
 }
-.map div[target='assistant'] .map-tools-content > p{
-  font-size: 20px;
-}
 .map .map-tools .map-tools-content > p {
-  font-size: 28px;
+  font-size: 2vmin;
+  line-height: 2.2em;
   color: #FF7171;
-  line-height: 60px;
 }
 .map .map-tools .map-tools-content > div {
-  font-size: 14px;
   color: #7F7F7F;
-  line-height: 20px;
+  font-size: 1.5vmin;
+  line-height: 1.6em;
   margin-right: 70px;
 }
 .map .map-tools .map-tools-content .close {
@@ -267,7 +263,6 @@ html {
   animation: bus5 3.5s 0s linear infinite;
   -webkit-animation: bus5 3.5s 0s linear infinite;
 }
-/*二级页共用样式*/
 .page {
   width: 100%;
   height: 100%;
@@ -433,104 +428,26 @@ html {
   -webkit-animation: clock_animate 1s 1s ease forwards;
   opacity: 0;
 }
-@-webkit-keyframes circle_bottom_ani {
-  from,
-  to {
-    transform: rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0, 0, 60deg);
-    height: 3px;
-  }
-  40% {
-    transform: rotate3d(0, 0.08, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0.08, 0, 60deg);
-    height: 3px;
-  }
-  45% {
-    transform: rotate3d(0, 0.3, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0.3, 0, 60deg);
-    height: 3px;
-  }
-  50% {
-    transform: rotate3d(0, 0.08, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0.08, 0, 60deg);
-    height: 3px;
-  }
-}
-@keyframes circle_bottom_ani {
-  from,
-  to {
-    transform: rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0, 0, 60deg);
-    height: 3px;
-  }
-  40% {
-    transform: rotate3d(0, 0.08, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0.08, 0, 60deg);
-    height: 3px;
-  }
-  45% {
-    transform: rotate3d(0, 0.3, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0.3, 0, 60deg);
-    height: 3px;
-  }
-  50% {
-    transform: rotate3d(0, 0.08, 0, 60deg);
-    -webkit-transform: rotate3d(0, 0.08, 0, 60deg);
-    height: 3px;
-  }
-}
-@-webkit-keyframes circle_ani {
+@-webkit-keyframes cloud {
   0%,
   100% {
-    transform: translateY(0) rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: translateY(0) rotate3d(0, 0, 0, 60deg);
-  }
-  40% {
-    transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
-    -webkit-transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
-  }
-  44% {
-    transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
-  }
-  45% {
-    transform: translateY(80px) rotate3d(0.5, 0, 0, 60deg);
-    -webkit-transform: translateY(80px) rotate3d(0.5, 0, 0, 60deg);
-  }
-  46% {
-    transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
-    -webkit-transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
 }
-@keyframes circle_ani {
+@keyframes cloud {
   0%,
   100% {
-    transform: translateY(0) rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: translateY(0) rotate3d(0, 0, 0, 60deg);
-  }
-  40% {
-    transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
-    -webkit-transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
-  }
-  44% {
-    transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
-  }
-  45% {
-    transform: translateY(80px) rotate3d(0.5, 0, 0, 60deg);
-    -webkit-transform: translateY(80px) rotate3d(0.5, 0, 0, 60deg);
-  }
-  46% {
-    transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
-    -webkit-transform: translateY(80px) rotate3d(0, 0, 0, 60deg);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
   50% {
-    transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
-    -webkit-transform: translateY(50px) rotate3d(0, 0.3, 0, 60deg);
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
   }
 }
 @-webkit-keyframes alipay_animate {
@@ -1193,15 +1110,6 @@ html {
     top: 15px;
     padding-left: 15px;
   }
-  .map .map-tools .map-tools-content > p {
-    font-size: 22px;
-    line-height: 45px;
-  }
-  .map .map-tools .map-tools-content > div {
-    font-size: 14px;
-    line-height: 22px;
-    margin-right: 50px;
-  }
   .map .map-tools .map-tools-content:before,
   .map .map-tools .map-tools-content:after {
     right: 20px;
@@ -1221,15 +1129,6 @@ html {
     top: 15px;
     padding-left: 10px;
   }
-  .map .map-tools .map-tools-content > p {
-    font-size: 18px;
-    line-height: 40px;
-  }
-  .map .map-tools .map-tools-content > div {
-    font-size: 14px;
-    line-height: 22px;
-    margin-right: 35px;
-  }
   .map .map-tools .map-tools-content:before,
   .map .map-tools .map-tools-content:after {
     width: 16px;
@@ -1247,9 +1146,7 @@ html {
   }
   .map .map-tools .map-tools-tip {
     width: 60px;
-    height: 60px;
-    line-height: 18px;
-    padding: 12px 0;
+    height: 60px;    
     font-size: 12px;
   }
   .map .map-tools .map-tools-tip:before,
@@ -1284,15 +1181,6 @@ html {
     top: 20px;
     padding-left: 10px;
   }
-  .map .map-tools .map-tools-content > p {
-    font-size: 16px;
-    line-height: 35px;
-  }
-  .map .map-tools .map-tools-content > div {
-    font-size: 14px;
-    line-height: 20px;
-    margin-right: 35px;
-  }
   .map .map-tools .map-tools-content:before,
   .map .map-tools .map-tools-content:after {
     width: 16px;
@@ -1306,8 +1194,6 @@ html {
   .map .map-tools .map-tools-tip {
     width: 50px;
     height: 50px;
-    line-height: 16px;
-    padding: 9px 0;
     font-size: 10px;
   }
   .map .map-tools .map-tools-tip:before,
@@ -1361,15 +1247,6 @@ html {
     top: 15px;
     padding-left: 10px;
   }
-  .map .map-tools .map-tools-content > p {
-    font-size: 16px;
-    line-height: 30px;
-  }
-  .map .map-tools .map-tools-content > div {
-    font-size: 10px;
-    line-height: 20px;
-    margin-right: 35px;
-  }
   .map .map-tools .map-tools-content:before,
   .map .map-tools .map-tools-content:after {
     width: 16px;
@@ -1411,4 +1288,3 @@ html {
     margin: 10px auto;
   }
 }
-/*# sourceMappingURL=yhxt.css.map */
