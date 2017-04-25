@@ -243,13 +243,13 @@ image.cloud {
   -moz-border-radius: 8px;
 }
 .map .map-tools .map-tools-content > p {
-  font-size: 2vmax;
+  font-size: 1.6em;
   line-height: 2.2em;
   color: #FF7171;
 }
 .map .map-tools .map-tools-content > div {
   color: #7F7F7F;
-  font-size: 1.5vmax;
+  font-size: 1.2em;
   line-height: 1.6em;
 }
 .map .map-tools .map-tools-content .close {
@@ -1170,14 +1170,6 @@ image.cloud {
     margin: 10px auto;
   }
 }
-@media screen and (orientation:landscape) {
-  .map .map-tools .map-tools-content > p {
-    font-size: 2vmin;
-  }
-  .map .map-tools .map-tools-content > div {
-    font-size: 1.5vmin;
-  }
-}
 @media screen and (min-width: 1440px) {
   .desc p:nth-of-type(2) {
     font-size: 16px !important;
@@ -1197,6 +1189,12 @@ image.cloud {
   .map .map-tools .map-tools-content:before,
   .map .map-tools .map-tools-content:after {
     right: 20px;
+  }
+  .map .map-tools .map-tools-content > p {
+    font-size: 1.5em;
+  }
+  .map .map-tools .map-tools-content > div {
+    font-size: 1.1em;
   }
   .risk-manage li .title {
     font-size: 16px !important;
@@ -1222,6 +1220,12 @@ image.cloud {
   }
   .map .map-tools .map-tools-content:after {
     margin-top: 5px;
+  }
+  .map .map-tools .map-tools-content > p {
+    font-size: 1.2em;
+  }
+  .map .map-tools .map-tools-content > div {
+    font-size: 0.9em;
   }
 }
 @media screen and (max-width: 1024px) {
