@@ -200,7 +200,7 @@ function UrlParam(){
 	    if(num>0){
 		    name=arr[i].substring(0,num);
 		    value=arr[i].substr(num+1);
-		    this[name]=value;
+		    this[name]=value;ƒ
 	    }
 	}
 }
@@ -227,7 +227,7 @@ $(function(){
 	$('.use_now').click(function(){
         var reg = $(".username").text();
         if(reg == ''){
-            var url = "{:C('URL_REG')}index.php?g=Home&m=Land&a=regwfx&landname=yhxt";
+            var url = "http://www.wangcaio2o.com/index.php?g=Home&m=Land&a=regwfx&landname=fashionretailers";
             art.dialog.open(url, {
                 id : "EnterpriseNo",
                 title : false,
@@ -236,7 +236,7 @@ $(function(){
                 fixed : true
             });
         }else{
-        	window.open("{:C('URL_REG')}index.php?m=Index&a=index");
+        	window.open("http://www.wangcaio2o.com/index.php?m=Index&a=index");
         }
     });
 
@@ -257,7 +257,7 @@ $(function(){
 			name:'cashier',
 			classname:'cashier',
 			title:'收银台',
-			position:{x:'0.4300',y:'0.7200'},
+			position:{x:'0.4500',y:'0.6800'},
 			content:{
 				title:'智能POS收单功能强',
 				txt:'支付全通道实现聚合收单</br>多平台优惠卡券核验</br>品牌会员积分管理系统'
@@ -273,7 +273,7 @@ $(function(){
 			name:'changing',
 			classname:'changing',
 			title:'试衣间',
-			position:{x:'0.3300',y:'0.6000'},
+			position:{x:'0.3400',y:'0.5600'},
 			content:{
 				title:'享受自助排队试衣的乐趣',
 				txt:'自助排队，方便有序，试衣简单快捷。'
@@ -281,7 +281,7 @@ $(function(){
 			name:'finance',
 			classname:'finance',
 			title:'财务室',
-			position:{x:'0.5480',y:'0.4940'},
+			position:{x:'0.5500',y:'0.420'},
 			content:{
 				title:'专业多维度的账目数据',
 				txt:'结算总览，交易明细及库存情况</br>清晰明了，多种查询维度报表下载</br>方便财务对账处理。'
@@ -289,7 +289,7 @@ $(function(){
       name:'marketing',
       classname:'marketing',
       title:'市场部',
-      position:{x:'0.5880',y:'0.1940'},
+      position:{x:'0.5700',y:'0.1500'},
       content:{
         title:'会员收集，大数据分析',
         txt:'会员管理，会员营销，会员行为数据</br>商业智能分析，助您在激烈的市场</br>竞争中一起绝尘。'
